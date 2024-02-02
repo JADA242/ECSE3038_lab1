@@ -7,8 +7,6 @@ def parallel(resistors):
     return f"{effect_resistance:.3f} ohms"
 
 
-print(parallel([440, 1030, 5600]))
-
 #Q2
 
 def potential_divider(voltage_supply, resistors):
@@ -20,10 +18,6 @@ def potential_divider(voltage_supply, resistors):
     formatfor_voltages = [f"{voltage:.3f}v" for voltage in voltage_drops]
     return formatfor_voltages
 
-
-voltages = potential_divider(9, [3000, 1000])
-for voltage in voltages:
-    print(voltage)
 
 
     #Q3
@@ -43,7 +37,5 @@ def temperature_check(temperature, unit='C'):
     
     return status
 
-patient_temperature = 37.5 
-temperature_unit = 'C'  
-print(temperature_check(patient_temperature, temperature_unit))
+
 
