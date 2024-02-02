@@ -11,7 +11,7 @@ print(parallel([440, 1030, 5600]))
 
 #Q2
 
-def pot_divider(voltage_supply, resistors):
+def potential_divider(voltage_supply, resistors):
 
 
 
@@ -21,6 +21,29 @@ def pot_divider(voltage_supply, resistors):
     return formatfor_voltages
 
 
-voltages = pot_divider(9, [3000, 1000])
+voltages = potential_divider(9, [3000, 1000])
 for voltage in voltages:
     print(voltage)
+
+
+    #Q3
+def temperature_check(temperature, unit='C'):
+
+    if unit == 'F':
+        temperature = (temperature - 32) * 5/9  
+
+    if temperature < 35.5:
+        status = "Danger, the patient is hypothermic."
+
+    elif 35.5 <= temperature <= 37.5:
+        status = "The patient's body temperature is within normal range."
+
+    else:
+        status = "Danger, the patient is hyperthermic."
+    
+    return status
+
+patient_temperature = 37.5 
+temperature_unit = 'C'  
+print(temperature_check(patient_temperature, temperature_unit))
+
